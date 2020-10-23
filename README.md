@@ -3,6 +3,24 @@
 - StatelessWidget
 - StatefulWidget
 
+## Widgets
+
+- Container
+- Scaffold
+- Center
+- Column  
+- Row
+- ListView
+- SafeArea
+- SizedBox
+- FlatButton
+
+## Properties
+
+- InputDecoration (TextFormField)
+- BoxDecoration (Container)
+
+
 ## Dicas
 
 stl -> para criar um widget StatelessWidget

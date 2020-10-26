@@ -1,3 +1,4 @@
+import 'package:app_shopping/pages/signup.page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -51,7 +52,14 @@ class Login extends StatelessWidget {
                           ),
                           FlatButton(
                             child: Text("Sign Up"),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SignupPage(),
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),

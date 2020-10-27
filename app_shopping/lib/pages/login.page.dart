@@ -129,14 +129,7 @@ class LoginPage extends StatelessWidget {
                               fontSize: 18,
                             ),
                           ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomePage(),
-                              ),
-                            );
-                          },
+                          onPressed: () {},
                         ),
                       ),
                     ],

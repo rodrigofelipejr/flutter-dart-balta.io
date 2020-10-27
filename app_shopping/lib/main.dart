@@ -1,3 +1,4 @@
+import 'package:app_shopping/pages/cart.page.dart';
 import 'package:app_shopping/pages/login.page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),
-      home: LoginPage(),
+      home: CartPage(),
     );
   }
 }

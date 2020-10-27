@@ -57,7 +57,7 @@ class ProductPage extends StatelessWidget {
               padding: EdgeInsets.all(10),
               child: Text(
                   "Nike Dri-FIT technology is an innovative polyester fabric designed to help keep you dry so you can more comfortably work harder, longer."),
-            )
+            ),
           ],
         ),
       ),

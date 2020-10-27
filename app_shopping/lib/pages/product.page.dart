@@ -4,7 +4,6 @@ class ProductPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
@@ -25,11 +24,41 @@ class ProductPage extends StatelessWidget {
             ),
           ];
         },
-        body: Container(
-          color: Colors.blue,
-          child: Center(
-            child: Text("Detalhes do Produto"),
-          ),
+        body: ListView(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                top: 10,
+                left: 10,
+                right: 10,
+              ),
+              child: Text(
+                "Dry Fit Long Sleeve",
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text("by Nike"),
+            ),
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(
+                "Details",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(
+                  "Nike Dri-FIT technology is an innovative polyester fabric designed to help keep you dry so you can more comfortably work harder, longer."),
+            )
+          ],
         ),
       ),
     );

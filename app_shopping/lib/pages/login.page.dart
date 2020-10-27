@@ -1,8 +1,9 @@
+import 'package:app_shopping/pages/home.page.dart';
 import 'package:app_shopping/pages/signup.page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class Login extends StatelessWidget {
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -128,7 +129,14 @@ class Login extends StatelessWidget {
                               fontSize: 18,
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePage(),
+                              ),
+                            );
+                          },
                         ),
                       ),
                     ],

@@ -5,60 +5,62 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: EdgeInsets.all(
-          15,
-        ),
-        color: Color(0xFFF5F5F5),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            SizedBox(
-              height: 60,
-            ),
-            search(),
-            SizedBox(
-              height: 30,
-            ),
-            Text(
-              "Categories",
-              style: TextStyle(
-                fontSize: 30,
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(
+            15,
+          ),
+          color: Color(0xFFF5F5F5),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SizedBox(
+                height: 60,
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              height: 90,
-              child: categoryList(),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Best Selling",
-                  style: TextStyle(
-                    fontSize: 30,
-                  ),
+              search(),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                "Categories",
+                style: TextStyle(
+                  fontSize: 30,
                 ),
-                FlatButton(
-                  child: Text("See All"),
-                  onPressed: () {},
-                )
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              height: 250,
-              child: productList(context),
-            )
-          ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                height: 90,
+                child: categoryList(),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Best Selling",
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),
+                  ),
+                  FlatButton(
+                    child: Text("See All"),
+                    onPressed: () {},
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                height: 280,
+                child: productList(context),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -189,7 +191,6 @@ Widget productItem(BuildContext context) {
           height: 10,
         ),
         Container(
-          height: 60,
           child: Text(
             "Título do produto",
             style: TextStyle(

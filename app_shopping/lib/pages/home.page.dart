@@ -1,4 +1,5 @@
 import 'package:app_shopping/pages/product.page.dart';
+import 'package:app_shopping/widgets/category/category-item.widget.dart';
 import 'package:app_shopping/widgets/search-box.widget.dart';
 import 'package:flutter/material.dart';
 
@@ -73,37 +74,13 @@ Widget categoryList() {
     child: ListView(
       scrollDirection: Axis.horizontal,
       children: [
-        categoryItem(),
-        categoryItem(),
-        categoryItem(),
-        categoryItem(),
-        categoryItem(),
+        CategoryItem(image: "assets/Icon_Devices.png"),
+        CategoryItem(image: "assets/Icon_Gadgets.png"),
+        CategoryItem(image: "assets/Icon_Gaming.png"),
+        CategoryItem(image: "assets/Icon_Mens_Shoe.png"),
+        CategoryItem(image: "assets/Icon_Womens_Shoe.png"),
       ],
     ),
-  );
-}
-
-Widget categoryItem() {
-  return Container(
-    width: 70,
-    height: 70,
-    padding: EdgeInsets.all(10),
-    margin: EdgeInsets.all(10),
-    decoration: BoxDecoration(
-      color: Colors.white,
-      boxShadow: [
-        new BoxShadow(
-          color: Colors.black12,
-          offset: new Offset(1, 1),
-          blurRadius: 5,
-          spreadRadius: 2,
-        )
-      ],
-      borderRadius: BorderRadius.all(
-        Radius.circular(64),
-      ),
-    ),
-    child: Image.asset("assets/Icon_Devices.png"),
   );
 }
 

@@ -1,6 +1,5 @@
-import 'package:app_shopping/pages/product.page.dart';
 import 'package:app_shopping/widgets/category/category-list-widget.dart';
-import 'package:app_shopping/widgets/product/product-card-widget.dart';
+import 'package:app_shopping/widgets/product/product-list-widget.dart';
 import 'package:app_shopping/widgets/search-box.widget.dart';
 import 'package:flutter/material.dart';
 
@@ -60,7 +59,9 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 height: 300,
-                child: productList(context),
+                child: ProductList(
+                  scrollDirection: Axis.horizontal,
+                ),
               ),
             ],
           ),
@@ -69,39 +70,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-Widget productList(BuildContext context) {
-  return Container(
-    child: ListView(
-      scrollDirection: Axis.horizontal,
-      children: [
-        ProductCard(
-          title: "Nike Dry-Fot Long Sleeve",
-          brand: "Nike",
-          image: "assets/product-10.png",
-          price: 150,
-        ),
-        ProductCard(
-          title: "LEather Wristwtch",
-          brand: "Tag Heuer",
-          image: "assets/product-2.png",
-          price: 450,
-        ),
-        ProductCard(
-          title: "BeoPLay Speaker",
-          brand: "Bang and Olufsen",
-          image: "assets/product-1.png",
-          price: 755,
-        ),
-        ProductCard(
-          title: "Smart bluetooh Speaker",
-          brand: "Google inc.",
-          image: "assets/product-3.png",
-          price: 900,
-        ),
-      ],
-    ),
-  );
-}
-
-Widget productItem(BuildContext context) {}

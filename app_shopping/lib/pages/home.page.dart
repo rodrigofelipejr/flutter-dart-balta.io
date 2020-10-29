@@ -1,5 +1,5 @@
 import 'package:app_shopping/pages/product.page.dart';
-import 'package:app_shopping/widgets/category/category-item.widget.dart';
+import 'package:app_shopping/widgets/category/category-list-widget.dart';
 import 'package:app_shopping/widgets/search-box.widget.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 height: 90,
-                child: categoryList(),
+                child: CategoryList(),
               ),
               SizedBox(
                 height: 30,
@@ -67,21 +67,6 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget categoryList() {
-  return Container(
-    child: ListView(
-      scrollDirection: Axis.horizontal,
-      children: [
-        CategoryItem(image: "assets/Icon_Devices.png"),
-        CategoryItem(image: "assets/Icon_Gadgets.png"),
-        CategoryItem(image: "assets/Icon_Gaming.png"),
-        CategoryItem(image: "assets/Icon_Mens_Shoe.png"),
-        CategoryItem(image: "assets/Icon_Womens_Shoe.png"),
-      ],
-    ),
-  );
 }
 
 Widget productList(BuildContext context) {

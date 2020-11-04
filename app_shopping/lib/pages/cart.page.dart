@@ -10,7 +10,7 @@ class CartPage extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              child: productList(),
+              child: productList(context),
             ),
           ),
           Container(
@@ -31,7 +31,7 @@ class CartPage extends StatelessWidget {
                       Text(
                         "\$4.250",
                         style: TextStyle(
-                          color: Colors.blue,
+                          color: Theme.of(context).primaryColor,
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
@@ -55,7 +55,7 @@ class CartPage extends StatelessWidget {
                     child: Text(
                       "Checkout",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Theme.of(context).accentColor,
                       ),
                     ),
                     onPressed: () => {},
@@ -70,20 +70,20 @@ class CartPage extends StatelessWidget {
   }
 }
 
-Widget productList() {
+Widget productList(context) {
   return ListView(
     children: [
-      productItem(),
-      productItem(),
-      productItem(),
-      productItem(),
-      productItem(),
-      productItem(),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
     ],
   );
 }
 
-Widget productItem() {
+Widget productItem(context) {
   return Container(
     height: 120,
     margin: EdgeInsets.all(5),
@@ -104,12 +104,13 @@ Widget productItem() {
             left: 10,
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text("Título do produto"),
               Text(
                 "\$ 200",
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Theme.of(context).primaryColor,
                 ),
               ),
               SizedBox(

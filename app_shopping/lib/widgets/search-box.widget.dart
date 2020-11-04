@@ -1,6 +1,36 @@
 import 'package:flutter/material.dart';
 
-class SearchBox extends StatelessWidget {
+class SearchBox extends StatefulWidget {
+  @override
+  _SearchBoxState createState() => _SearchBoxState();
+}
+
+class _SearchBoxState extends State<SearchBox>
+    with SingleTickerProviderStateMixin {
+  AnimationController _animationController;
+
+  /* 
+    LEMBRE-SE DE INSTANCIAR O CONTROLLER E FAZER O DISPOSE, PARA QUE NÃO OCORRA 
+    CONSUMO DESNECESSÁRIO DE MEMÓRIA  
+  */
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = new AnimationController(
+      vsync: this,
+      duration: Duration(
+        seconds: 1,
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(

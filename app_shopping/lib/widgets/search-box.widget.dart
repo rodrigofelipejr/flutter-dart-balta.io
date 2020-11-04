@@ -26,14 +26,14 @@ class SearchBox extends StatelessWidget {
                 labelText: "Search...",
                 border: InputBorder.none,
                 labelStyle: TextStyle(
-                  color: Colors.blue,
+                  color: Theme.of(context).primaryColor,
                   fontWeight: FontWeight.w300,
                   fontSize: 16,
                 ),
               ),
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.blue,
+                color: Theme.of(context).primaryColor,
               ),
             ),
           )

@@ -38,12 +38,15 @@ class ProductCard extends StatelessWidget {
                 ),
               );
             },
-            child: Image.asset(
-              image,
-              width: 170,
-              height: 170,
-              fit: BoxFit
-                  .cover, /* largura 100%  e altura 100%, sem distorcer a imagem */
+            child: Hero(
+              tag: image,
+              child: Image.asset(
+                image,
+                width: 170,
+                height: 170,
+                fit: BoxFit
+                    .cover, /* largura 100%  e altura 100%, sem distorcer a imagem */
+              ),
             ),
           ),
           SizedBox(

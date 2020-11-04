@@ -1,7 +1,7 @@
 import 'package:app_shopping/pages/tabs.page.dart';
-import 'package:app_shopping/themes/dark-yellow.theme.dart';
-import 'package:app_shopping/themes/dark.theme.dart';
 import 'package:app_shopping/themes/light.theme.dart';
+import 'package:app_shopping/themes/dark.theme.dart';
+import 'package:app_shopping/themes/dark-yellow.theme.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());

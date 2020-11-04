@@ -9,11 +9,11 @@ ThemeData lightTheme() {
   return ThemeData(
     // primarySwatch: primaryColor,
     brightness: brightness,
-    // textTheme: new TextTheme(
-    //   body1: new TextStyle(color: Colors.red),
-    //   display4: new TextStyle(fontSize: 78),
-    //   button: new TextStyle(color: Colors.green),
-    // ),
+    textTheme: new TextTheme(
+        body1: new TextStyle(color: Colors.red),
+        display4: new TextStyle(fontSize: 78),
+        button: new TextStyle(color: Colors.green),
+        headline: new TextStyle(color: Colors.deepPurple)),
     // tabBarTheme:
     // accentIconTheme:
     // accentTextTheme:

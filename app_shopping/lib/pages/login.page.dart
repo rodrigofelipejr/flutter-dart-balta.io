@@ -43,6 +43,7 @@ class LoginPage extends StatelessWidget {
                     bottom: 15,
                   ),
                   child: Form(
+                    key: _formKey,
                     child: Column(
                       children: [
                         Row(
@@ -97,6 +98,12 @@ class LoginPage extends StatelessWidget {
                             fontSize: 20,
                             color: Theme.of(context).primaryColor,
                           ),
+                          validator: (value) {
+                            if (value.isEmpty) {
+                              return 'Invalid E-mail';
+                            }
+                            return null;
+                          },
                         ),
                         SizedBox(
                           height: 10,
@@ -118,6 +125,12 @@ class LoginPage extends StatelessWidget {
                             fontSize: 20,
                             color: Theme.of(context).primaryColor,
                           ),
+                          validator: (value) {
+                            if (value.isEmpty) {
+                              return 'Invalid Password';
+                            }
+                            return null;
+                          },
                         ),
                         SizedBox(
                           height: 10,

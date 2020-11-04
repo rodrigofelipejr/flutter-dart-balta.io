@@ -104,6 +104,7 @@ class LoginPage extends StatelessWidget {
                             }
                             return null;
                           },
+                          onSaved: (input) => _email = input,
                         ),
                         SizedBox(
                           height: 10,
@@ -131,6 +132,7 @@ class LoginPage extends StatelessWidget {
                             }
                             return null;
                           },
+                          onSaved: (input) => _password = input,
                         ),
                         SizedBox(
                           height: 10,
@@ -167,7 +169,19 @@ class LoginPage extends StatelessWidget {
                                 fontSize: 18,
                               ),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              if (_formKey.currentState.validate()) {
+                                _formKey.currentState.save();
+                                print(_email);
+                                print(_password);
+
+                                Scaffold.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text('Welcome, $_email'),
+                                  ),
+                                );
+                              }
+                            },
                           ),
                         ),
                       ],

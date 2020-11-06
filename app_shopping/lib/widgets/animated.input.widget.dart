@@ -48,6 +48,45 @@ class AnimatedInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      height: 60,
+      decoration: BoxDecoration(
+        color: containerColorAnim.value,
+        borderRadius: BorderRadius.all(
+          Radius.circular(containerBorderRadiusAnim.value),
+        ),
+      ),
+      margin: EdgeInsets.all(5),
+      width: containerSizeAnim.value,
+      child: Opacity(
+        opacity: containerOpacityAnim.value,
+        child: Row(
+          children: [
+            SizedBox(
+              width: 20,
+            ),
+            Container(
+              width: 200,
+              child: TextFormField(
+                keyboardType: TextInputType.text,
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  labelText: "Search...",
+                  labelStyle: TextStyle(
+                    color: Theme.of(context).primaryColor,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 16,
+                  ),
+                ),
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Theme.of(context).primaryColor,
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

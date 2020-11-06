@@ -20,7 +20,7 @@ class AnimatedInput extends StatelessWidget {
         ),
         containerSizeAnim = Tween(
           begin: 60.0,
-          end: 280.0,
+          end: 220.0,
         ).animate(
           CurvedAnimation(
             parent: controller,
@@ -46,8 +46,18 @@ class AnimatedInput extends StatelessWidget {
           ),
         );
 
+  /*
+  * Apenas separando para não ficar no mesmo Widget
+  */
   @override
   Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      builder: _animate,
+      animation: controller,
+    );
+  }
+
+  Widget _animate(context, child) {
     return Container(
       height: 60,
       decoration: BoxDecoration(

@@ -41,13 +41,21 @@ class EditorContactView extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            FlatButton(
-              onPressed: () {},
-              color: primaryColor,
-              child: Text(
-                "Salvar",
-                style: TextStyle(
+            Container(
+              width: double.infinity,
+              height: 50,
+              child: FlatButton.icon(
+                icon: Icon(
+                  Icons.save,
                   color: accentColor,
+                ),
+                onPressed: () {},
+                color: primaryColor,
+                label: Text(
+                  "Salvar",
+                  style: TextStyle(
+                    color: accentColor,
+                  ),
                 ),
               ),
             ),

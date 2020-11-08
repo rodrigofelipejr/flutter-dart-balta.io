@@ -10,7 +10,7 @@ class EditorContactView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Editar Contato"),
+        title: model == null ? Text("Novo Contato") : Text("Editar Contato"),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,

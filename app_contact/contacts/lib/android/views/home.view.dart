@@ -1,3 +1,4 @@
+import 'package:contacts/android/styles.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -16,6 +17,24 @@ class HomeView extends StatelessWidget {
           ),
           onPressed: () {},
         ),
+      ),
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        children: [
+          ListTile(
+              leading: Image.network(
+                "https://source.unsplash.com/user/erondu/150x150",
+              ),
+              title: Text("Rodrigo Felipe"),
+              subtitle: Text("11 9 9999-9999"),
+              trailing: FlatButton(
+                onPressed: () {},
+                child: Icon(
+                  Icons.chat,
+                  color: primaryColor,
+                ),
+              ))
+        ],
       ),
     );
   }

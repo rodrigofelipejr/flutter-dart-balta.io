@@ -8,7 +8,9 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text("Meus contatos"),
+        title: Text(
+          "Meus contatos",
+        ),
         centerTitle: true,
         leading: FlatButton(
           child: Icon(
@@ -34,8 +36,8 @@ class HomeView extends StatelessWidget {
                   ),
                 ),
               ),
-              title: Text("Rodrigo Felipe"),
-              subtitle: Text("11 9 9999-9999"),
+              title: Text("André Figueiredo"),
+              subtitle: Text("11 9 8845-3278"),
               trailing: FlatButton(
                 onPressed: () {},
                 child: Icon(
@@ -44,6 +46,14 @@ class HomeView extends StatelessWidget {
                 ),
               ))
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: primaryColor,
+        child: Icon(
+          Icons.add,
+          color: accentColor,
+        ),
       ),
     );
   }

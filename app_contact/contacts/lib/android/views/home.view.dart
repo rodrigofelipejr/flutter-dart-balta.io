@@ -25,33 +25,35 @@ class HomeView extends StatelessWidget {
         scrollDirection: Axis.vertical,
         children: [
           ListTile(
-              leading: Container(
-                width: 48,
-                height: 48,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(48),
-                  color: Colors.grey,
-                  image: DecorationImage(
-                    image: NetworkImage(
-                        "https://source.unsplash.com/user/erondu/150x150"),
-                  ),
+            leading: Container(
+              width: 48,
+              height: 48,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(48),
+                color: Colors.grey,
+                image: DecorationImage(
+                  image: NetworkImage(
+                      "https://source.unsplash.com/user/erondu/150x150"),
                 ),
               ),
-              title: Text("André Figueiredo"),
-              subtitle: Text("11 9 8845-3278"),
-              trailing: FlatButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => DetailsView(),
-                      ));
-                },
-                child: Icon(
-                  Icons.chat,
-                  color: primaryColor,
-                ),
-              ))
+            ),
+            title: Text("André Figueiredo"),
+            subtitle: Text("11 9 8845-3278"),
+            trailing: FlatButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetailsView(),
+                  ),
+                );
+              },
+              child: Icon(
+                Icons.chat,
+                color: primaryColor,
+              ),
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(

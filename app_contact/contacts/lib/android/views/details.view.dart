@@ -104,7 +104,52 @@ class DetailsView extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(
+            height: 20,
+          ),
+          ListTile(
+            title: Text(
+              "Endereço",
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 16,
+              ),
+            ),
+            subtitle: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Rua do Desenvolvedor, 256",
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+                Text(
+                  "Piracicaba/SP",
+                  style: TextStyle(
+                    fontSize: 12,
+                  ),
+                ),
+              ],
+            ),
+            isThreeLine: true,
+            trailing: FlatButton(
+              onPressed: () {},
+              child: Icon(
+                Icons.pin_drop,
+                color: primaryColor,
+              ),
+            ),
+          ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: primaryColor,
+        child: Icon(
+          Icons.edit,
+          color: accentColor,
+        ),
       ),
     );
   }

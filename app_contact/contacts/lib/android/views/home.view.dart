@@ -1,4 +1,5 @@
 import 'package:contacts/android/styles.dart';
+import 'package:contacts/android/views/details.view.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -39,7 +40,13 @@ class HomeView extends StatelessWidget {
               title: Text("André Figueiredo"),
               subtitle: Text("11 9 8845-3278"),
               trailing: FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DetailsView(),
+                      ));
+                },
                 child: Icon(
                   Icons.chat,
                   color: primaryColor,

@@ -1,5 +1,6 @@
-import 'package:app_shopping/widgets/animated.input.widget.dart';
 import 'package:flutter/material.dart';
+
+import 'animated.input.widget.dart';
 
 class SearchBox extends StatefulWidget {
   @override
@@ -49,11 +50,11 @@ class _SearchBoxState extends State<SearchBox>
             menuOpened = !menuOpened;
           },
           child: AnimatedIcon(
-            icon: AnimatedIcons.close_menu,
+            icon: AnimatedIcons.menu_close,
             progress: _animationController,
             semanticLabel: 'Open Menu',
           ),
-        )
+        ),
       ],
     );
   }

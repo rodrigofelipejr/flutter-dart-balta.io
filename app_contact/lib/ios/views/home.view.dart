@@ -1,6 +1,7 @@
+import 'package:contacts/ios/views/details.view.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../../android/styles.dart';
+import '../style.dart';
 
 class HomeView extends StatelessWidget {
   @override
@@ -54,8 +55,9 @@ class HomeView extends StatelessWidget {
                             ),
                             Expanded(
                               child: Container(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 8),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                ),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -80,10 +82,17 @@ class HomeView extends StatelessWidget {
                                 CupertinoIcons.person,
                                 color: primaryColor,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  CupertinoPageRoute(
+                                    builder: (context) => DetailsView(),
+                                  ),
+                                );
+                              },
                             ),
                           ],
-                        )
+                        ),
                       ],
                     ),
                   ),

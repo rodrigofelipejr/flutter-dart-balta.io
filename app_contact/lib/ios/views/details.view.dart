@@ -1,3 +1,6 @@
+import 'package:contacts/ios/views/address.view.dart';
+import 'package:contacts/ios/views/editor.contact.view.dart';
+import 'package:contacts/models/contact.model.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../style.dart';
@@ -14,7 +17,21 @@ class DetailsView extends StatelessWidget {
               child: Icon(
                 CupertinoIcons.pen,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => EditorContactView(
+                      model: ContactModel(
+                        id: "1",
+                        name: "André Baltieri",
+                        email: "andre@balta.io",
+                        phone: "11 97214-2555",
+                      ),
+                    ),
+                  ),
+                );
+              },
             ),
           ),
           SliverFillRemaining(
@@ -91,7 +108,7 @@ class DetailsView extends StatelessWidget {
                     CupertinoButton(
                       onPressed: () {},
                       child: Icon(
-                        CupertinoIcons.mail,
+                        CupertinoIcons.photo_camera,
                         color: accentColor,
                       ),
                     ),
@@ -137,7 +154,14 @@ class DetailsView extends StatelessWidget {
                               CupertinoIcons.location,
                               color: primaryColor,
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                CupertinoPageRoute(
+                                  builder: (context) => AddressView(),
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),

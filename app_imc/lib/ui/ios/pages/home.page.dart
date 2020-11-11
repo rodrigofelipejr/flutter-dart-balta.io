@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -8,27 +8,23 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Cálculo de IMC"),
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text("Cálculo do IMC"),
       ),
-      body: ListView(
+      child: ListView(
         children: [
           Padding(
             padding: EdgeInsets.all(20),
-            child: TextFormField(
-              decoration: InputDecoration(
-                labelText: "Altura (cm)",
-              ),
+            child: CupertinoTextField(
+              placeholder: "Altura (cm)",
               keyboardType: TextInputType.number,
             ),
           ),
           Padding(
             padding: EdgeInsets.all(20),
-            child: TextFormField(
-              decoration: InputDecoration(
-                labelText: "Peso (kg)",
-              ),
+            child: CupertinoTextField(
+              placeholder: "Peso (kg)",
               keyboardType: TextInputType.number,
             ),
           ),
@@ -41,11 +37,9 @@ class _HomePageState extends State<HomePage> {
           ),
           Padding(
             padding: EdgeInsets.all(20),
-            child: FlatButton(
-              color: Theme.of(context).primaryColor,
+            child: CupertinoButton.filled(
               child: Text(
                 "Calcular",
-                style: TextStyle(color: Colors.white),
               ),
               onPressed: () {},
             ),

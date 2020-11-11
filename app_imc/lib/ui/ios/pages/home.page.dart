@@ -1,5 +1,5 @@
 import 'package:app_imc/blocs/Imc.bloc.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,30 +11,26 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Cálculo de IMC"),
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text("Cálculo do IMC"),
       ),
-      body: ListView(
+      child: ListView(
         children: [
           Padding(
             padding: EdgeInsets.all(20),
-            child: TextFormField(
-              decoration: InputDecoration(
-                labelText: "Altura (cm)",
-              ),
-              keyboardType: TextInputType.number,
+            child: CupertinoTextField(
+              placeholder: "Altura (cm)",
               controller: bloc.heightCtrl,
+              keyboardType: TextInputType.number,
             ),
           ),
           Padding(
             padding: EdgeInsets.all(20),
-            child: TextFormField(
-              decoration: InputDecoration(
-                labelText: "Peso (kg)",
-              ),
-              keyboardType: TextInputType.number,
+            child: CupertinoTextField(
+              placeholder: "Peso (kg)",
               controller: bloc.weightCtrl,
+              keyboardType: TextInputType.number,
             ),
           ),
           Padding(
@@ -46,11 +42,9 @@ class _HomePageState extends State<HomePage> {
           ),
           Padding(
             padding: EdgeInsets.all(20),
-            child: FlatButton(
-              color: Theme.of(context).primaryColor,
+            child: CupertinoButton.filled(
               child: Text(
                 "Calcular",
-                style: TextStyle(color: Colors.white),
               ),
               onPressed: () {
                 setState(() {

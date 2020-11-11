@@ -1,21 +1,12 @@
+import 'package:app_imc/ui/android/material.app.dart';
+import 'package:app_imc/ui/ios/cupertino-app.dart';
 import 'package:flutter/material.dart';
+import 'dart:io' show Platform;
 
 void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'IMC',
-      debugShowCheckedModeBunne: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: HomePage(),
-    );
+  if (Platform.isIOS) {
+    runApp(MyCupertinoApp());
+  } else {
+    runApp(MyMaterialApp());
   }
 }

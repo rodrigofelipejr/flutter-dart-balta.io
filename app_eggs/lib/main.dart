@@ -1,3 +1,4 @@
+import 'package:app_eggs/pages/splash.page.dart';
 import 'package:app_eggs/themes/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Perfect Eggs',
       theme: appTheme(),
-      home: Container(),
+      home: SplashPage(),
     );
   }
 }

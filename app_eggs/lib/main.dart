@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 import 'blocs/app.bloc.dart';
 
-void main() => (MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override

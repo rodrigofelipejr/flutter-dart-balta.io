@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class cButton extends StatelessWidget {
+class TDButton extends StatelessWidget {
   final String text;
   final String image;
   final Function callback;
   final double width;
 
-  cButton({
+  TDButton({
     @required this.text,
     @required this.image,
     this.callback,

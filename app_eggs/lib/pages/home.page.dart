@@ -1,6 +1,7 @@
 import 'package:app_eggs/blocs/app.bloc.dart';
 import 'package:app_eggs/blocs/type-buttons.widget.dart';
 import 'package:app_eggs/widgets/action-buttons.widget.dart';
+import 'package:app_eggs/widgets/progress.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -25,6 +26,7 @@ class HomePage extends StatelessWidget {
               height: 20,
             ),
             ActionButtons(),
+            Progress(),
           ],
         ),
       ),

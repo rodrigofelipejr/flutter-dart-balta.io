@@ -6,7 +6,7 @@ class AppBloc extends ChangeNotifier {
   Timer timer;
   String state = "stopped";
   String selected = "soft";
-  double time = 0.1 * 60.0;
+  double time = 5 * 60.0;
   double seconds = 0;
   double percent = 0;
 

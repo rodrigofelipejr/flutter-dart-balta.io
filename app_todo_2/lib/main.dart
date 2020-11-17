@@ -1,6 +1,5 @@
 import 'package:app_todo_2/themes/app.theme.dart';
-import 'package:app_todo_2/views/home.view.dart';
-import 'package:app_todo_2/views/login.view.dart';
+import 'package:app_todo_2/views/create-todo.view.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Todos',
       theme: appTheme(),
-      home: HomeView(),
+      home: CreateTodoView(),
     );
   }
 }

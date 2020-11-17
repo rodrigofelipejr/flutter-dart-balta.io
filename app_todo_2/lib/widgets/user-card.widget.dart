@@ -35,6 +35,9 @@ class UserCard extends StatelessWidget {
               color: Colors.white,
             ),
           ),
+          SizedBox(
+            height: 10,
+          ),
           Container(
             height: 20,
             child: FlatButton(

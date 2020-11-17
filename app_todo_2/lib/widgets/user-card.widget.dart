@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/avatar.widget.dart';
+
 class UserCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,40 @@ class UserCard extends StatelessWidget {
           alignment: Alignment.bottomCenter,
         ),
       ),
-      height: 300,
+      width: double.infinity,
+      alignment: Alignment.center,
+      child: Column(
+        children: [
+          TDAvatar(
+            path: "https://placehold.it/80",
+            width: 80,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Rodrigo Felipe",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          Container(
+            height: 20,
+            child: FlatButton(
+              child: Text(
+                "Sair",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              onPressed: () {},
+            ),
+          ),
+          SizedBox(
+            height: 40,
+          )
+        ],
+      ),
     );
   }
 }

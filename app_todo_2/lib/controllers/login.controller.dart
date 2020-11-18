@@ -11,15 +11,18 @@ class LoginController {
   Future login() async {
     final GoogleSignInAccount googleUser = await _googleSignIn.signIn();
     final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
-    final AuthCredential credential =
-        GoogleAuthProvider.getCredential(idToken: googleAuth.accessToken, accessToken: googleAuth.idToken);
-    final FirebaseUser firebaseUser = (await _firebaseAuth.signInWithCredential(credential)).user;
+
+    final AuthCredential credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
+    final User firebaseUser = (await _firebaseAuth.signInWithCredential(credential)).user;
 
     var token = await firebaseUser.getIdToken();
 
     user.name = firebaseUser.displayName;
     user.email = firebaseUser.displayName;
-    user.picture = firebaseUser.photoUrl;
+    user.picture = firebaseUser.photoURL;
     user.token = token;
   }
 

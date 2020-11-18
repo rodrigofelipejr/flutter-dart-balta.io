@@ -39,7 +39,7 @@ class _LoginViewState extends State<LoginView> {
   }
 
   onError() {
-    var snackbar = new SnackBar(content: new Text("Falha no logiin"));
+    var snackbar = new SnackBar(content: new Text("Falha no login"));
     scaffoldKey.currentState.showSnackBar(snackbar);
   }
 

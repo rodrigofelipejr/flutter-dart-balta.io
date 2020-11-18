@@ -1,5 +1,6 @@
 import 'package:app_todo_2/components/button.widget.dart';
 import 'package:app_todo_2/controllers/login.controller.dart';
+import 'package:app_todo_2/widgets/busy.widget.dart';
 import 'package:flutter/material.dart';
 
 import 'home.view.dart';
@@ -51,40 +52,46 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.all(30),
-          child: Card(
-            child: Column(
-              children: [
-                SizedBox(
-                  width: double.infinity,
-                ),
-                SizedBox(
-                  height: 40,
-                ),
-                Image.asset(
-                  "assets/images/notification.png",
-                  width: 250,
-                ),
-                Text(
-                  "Olá desconhecido",
-                  style: TextStyle(
-                    fontSize: 20,
+          child: TDBusy(
+            busy: busy,
+            child: Card(
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: double.infinity,
                   ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                TDButton(
-                  text: "Login com Google",
-                  image: "assets/images/google.png",
-                  callback: () {},
-                ),
-                SizedBox(
-                  height: 40,
-                ),
-              ],
+                  SizedBox(
+                    height: 40,
+                  ),
+                  Image.asset(
+                    "assets/images/notification.png",
+                    width: 250,
+                  ),
+                  Text(
+                    "Olá desconhecido",
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  TDButton(
+                    text: "Login com Google",
+                    image: "assets/images/google.png",
+                    callback: () {
+                      handleSignIn();
+                    },
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

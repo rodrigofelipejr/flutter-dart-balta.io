@@ -20,7 +20,7 @@ class LoginController {
     user.name = firebaseUser.displayName;
     user.email = firebaseUser.displayName;
     user.picture = firebaseUser.photoUrl;
-    user.token = token.token;
+    user.token = token;
   }
 
   Future logout() async {

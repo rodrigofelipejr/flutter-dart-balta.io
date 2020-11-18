@@ -8,8 +8,8 @@ class TDButton extends StatelessWidget {
 
   TDButton({
     @required this.text,
-    @required this.image,
-    this.callback,
+    @required this.callback,
+    this.image,
     this.width,
   });
 

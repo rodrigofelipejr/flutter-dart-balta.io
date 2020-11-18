@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../components/button.widget.dart';
 import '../widgets/user-card.widget.dart';
 
 class CreateTodoView extends StatelessWidget {
@@ -60,6 +61,15 @@ class CreateTodoView extends StatelessWidget {
                 top: 20,
                 bottom: 10,
               ),
+              child: TDButton(
+                text: "Savar",
+                width: double.infinity,
+                callback: () {},
+              ),
+            ),
+            FlatButton(
+              onPressed: () {},
+              child: Text("Cancelar"),
             ),
           ],
         ),

@@ -1,7 +1,12 @@
 import 'package:app_todo_2/models/todo-item.model.dart';
 import 'package:mobx/mobx.dart';
+part 'app.store.g.dart'; /* esta classe esta dividida em duas pastes */
 
-class AppStore {
+// app.store.g.dart (g => generator)
+
+class AppStore = _AppStore with _$AppStore;
+
+class _AppStore with Store {
   @observable // anotação
   String currentState = "none";
 

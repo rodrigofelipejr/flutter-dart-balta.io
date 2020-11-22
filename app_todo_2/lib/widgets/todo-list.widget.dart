@@ -36,7 +36,46 @@ class TodoList extends StatelessWidget {
                         color: todo.done ? Colors.black.withOpacity(0.2) : Colors.black,
                       ),
                     ),
-                    subtitle: Text(_dateFormat.format(todo.date)),
+                    subtitle: Text(
+                      _dateFormat.format(todo.date),
+                    ),
+                    onLongPress: () {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text("Concluir a Tarefa"),
+                            content: Text("Deseja concluir a terafa ${todo.title}?"),
+                            actions: [
+                              FlatButton(
+                                child: new Text("Cancelar"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                              FlatButton(
+                                child: new Text(
+                                  "Concluir",
+                                  style: TextStyle(
+                                    color: Colors.green,
+                                  ),
+                                ),
+                                onPressed: () {
+                                  controller.markAsDone(todo).then((data) {
+                                    Navigator.of(context).pop();
+                                  }).catchError((err) {
+                                    var snackbar = new SnackBar(
+                                      content: Text("Ops, algo deu errado!"),
+                                    );
+                                    Scaffold.of(context).showSnackBar(snackbar);
+                                  });
+                                },
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    },
                   );
                 },
               ),

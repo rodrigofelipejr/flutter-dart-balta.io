@@ -1,3 +1,4 @@
+import 'package:app_todo_2/models/todo-item.model.dart';
 import 'package:app_todo_2/repositories/todo.repository.dart';
 import 'package:app_todo_2/stores/app.store.dart';
 
@@ -46,5 +47,19 @@ class TodoController {
         );
         break;
     }
+  }
+
+  Future add(TodoItem item) async {
+    _store.busy = true;
+    await _repository.add(item);
+    _store.busy = false;
+    changeSelection(_store.currentState);
+  }
+
+  Future markAsDone(TodoItem item) async {
+    _store.busy = true;
+    await _repository.maskAsDone(item);
+    _store.busy = false;
+    changeSelection(_store.currentState);
   }
 }

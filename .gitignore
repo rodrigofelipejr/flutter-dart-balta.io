@@ -9,6 +9,8 @@
 **/.history
 **/.svn/
 
+/Downloads
+
 # IntelliJ related
 **/*.iml
 **/*.ipr

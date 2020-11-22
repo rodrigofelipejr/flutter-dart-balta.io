@@ -1,5 +1,6 @@
 import 'package:app_todo_2/controllers/todo.controller.dart';
 import 'package:app_todo_2/stores/app.store.dart';
+import 'package:app_todo_2/views/create-todo.view.dart';
 import 'package:app_todo_2/widgets/navbar.widget.dart';
 import 'package:app_todo_2/widgets/todo-list.widget.dart';
 import 'package:app_todo_2/widgets/user-card.widget.dart';
@@ -30,7 +31,14 @@ class HomeView extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CreateTodoView(),
+            ),
+          );
+        },
         child: Icon(
           Icons.add,
         ),

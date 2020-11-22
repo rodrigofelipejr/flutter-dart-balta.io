@@ -1,34 +1,46 @@
+import 'package:app_todo_2/controllers/todo.controller.dart';
+import 'package:app_todo_2/stores/app.store.dart';
+import 'package:app_todo_2/widgets/busy.widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
 class TodoList extends StatelessWidget {
+  final _dateFormat = new DateFormat('dd/MM/yyyy');
+
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: EdgeInsets.only(
-        left: 40,
+    final store = Provider.of<AppStore>(context);
+    final controller = new TodoController(store);
+
+    return Observer(
+      builder: (_) => TDBusy(
+        busy: store.busy,
+        child: store.todos.length == 0
+            ? Center(
+                child: Text("Nenhuma tarefa encontrada!"),
+              )
+            : ListView.builder(
+                padding: EdgeInsets.only(
+                  left: 40,
+                ),
+                itemCount: store.todos.length,
+                itemBuilder: (context, index) {
+                  var todo = store.todos[index];
+                  return ListTile(
+                    title: Text(
+                      todo.title,
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: todo.done ? Colors.black.withOpacity(0.2) : Colors.black,
+                      ),
+                    ),
+                    subtitle: Text(_dateFormat.format(todo.date)),
+                  );
+                },
+              ),
       ),
-      children: [
-        ListTile(
-          title: Text(
-            "Ir ao supermercado",
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.black,
-            ),
-          ),
-          subtitle: Text("02/02/2020"),
-        ),
-        ListTile(
-          title: Text(
-            "Ir a academia",
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.black.withOpacity(0.2),
-            ),
-          ),
-          subtitle: Text("02/02/2020"),
-        ),
-      ],
     );
   }
 }

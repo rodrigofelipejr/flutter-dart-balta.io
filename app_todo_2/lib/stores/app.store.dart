@@ -29,7 +29,7 @@ abstract class _AppStore with Store {
   }
 
   @action
-  void setTodos(ObservableList<TodoItem> items) {
+  void setTodos(List<TodoItem> items) {
     todos.addAll(items);
   }
 

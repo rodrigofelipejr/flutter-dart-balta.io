@@ -1,6 +1,6 @@
 /* https://javiercbk.github.io/json_to_dart/ */
 class TodoItem {
-  int id;
+  String id;
   String title;
   bool done;
   DateTime date;

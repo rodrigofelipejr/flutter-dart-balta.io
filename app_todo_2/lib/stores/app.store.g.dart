@@ -79,7 +79,7 @@ mixin _$AppStore on _AppStore, Store {
   }
 
   @override
-  void setTodos(ObservableList<TodoItem> items) {
+  void setTodos(List<TodoItem> items) {
     final _$actionInfo =
         _$_AppStoreActionController.startAction(name: '_AppStore.setTodos');
     try {

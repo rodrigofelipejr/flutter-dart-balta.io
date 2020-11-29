@@ -1,11 +1,8 @@
-import 'dart:js';
-
 import 'package:app_shopping_2/ui/shared/widgets/shared/loader.widget.dart';
 import 'package:flutter/widgets.dart';
 import 'package:app_shopping_2/models/category.model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'category-card-widget.dart';
 
 class CategoryList extends StatelessWidget {

@@ -1,5 +1,6 @@
 import 'package:app_shopping_2/models/product-list-item.model.dart';
 import 'package:app_shopping_2/ui/android/pages/product.page.dart';
+import 'package:app_shopping_2/ui/shared/widgets/shared/add-to-cart.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -15,6 +16,7 @@ class ProductCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(5),
       width: 240,
+      // height: 300,
       decoration: BoxDecoration(
         color: Colors.black.withOpacity(0.03),
         borderRadius: BorderRadius.all(
@@ -103,7 +105,7 @@ class ProductCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                // AddToCart(item: item),
+                AddToCart(product: product),
               ],
             ),
           ),

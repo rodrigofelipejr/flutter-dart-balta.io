@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
         child: ListView(
           children: [
             SizedBox(
-              height: 60,
+              height: 30,
             ),
             Text(
               "Categorias",

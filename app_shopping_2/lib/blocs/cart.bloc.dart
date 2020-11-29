@@ -24,6 +24,8 @@ class CartBloc extends ChangeNotifier {
     cart.forEach((_item) {
       result = _item.id == item.id ? true : false;
     });
+
+    return result;
   }
 
   incrase(CartItemModel item) {

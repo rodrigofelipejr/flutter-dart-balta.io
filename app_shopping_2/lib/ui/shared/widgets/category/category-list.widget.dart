@@ -31,7 +31,7 @@ class CategoryList extends StatelessWidget {
         return Padding(
           padding: EdgeInsets.all(5),
           child: CategoryCard(
-            item: itemCategory,
+            category: itemCategory,
           ),
         );
       },

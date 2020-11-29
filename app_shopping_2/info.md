@@ -17,3 +17,12 @@
 ## Themes
 
 - Os temas do nosso APP
+
+## Bloc
+
+É um padrão
+
+## Provider
+
+É um pacote para injeção de dependencia
+Mantem um item único na memória (state managment)

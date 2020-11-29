@@ -1,5 +1,5 @@
 import 'package:app_shopping_2/blocs/home.bloc.dart';
-import 'package:app_shopping_2/ui/android/pages/home.page.dart';
+import 'package:app_shopping_2/ui/android/pages/tabs.page.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +30,10 @@ class Main extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      home: DefaultTabController(
+        length: 3,
+        child: TabPage(),
+      ),
     );
   }
 }

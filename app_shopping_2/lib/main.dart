@@ -1,3 +1,4 @@
+import 'package:app_shopping_2/blocs/account.bloc.dart';
 import 'package:app_shopping_2/blocs/cart.bloc.dart';
 import 'package:app_shopping_2/blocs/home.bloc.dart';
 import 'package:app_shopping_2/ui/android/pages/tabs.page.dart';
@@ -16,6 +17,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider<CartBloc>.value(
           value: CartBloc(),
+        ),
+        ChangeNotifierProvider<AccountBloc>.value(
+          value: AccountBloc(),
         )
       ],
       child: Main(),

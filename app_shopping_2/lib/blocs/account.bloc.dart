@@ -30,6 +30,8 @@ class AccountBloc extends ChangeNotifier {
       print(ex);
       user = null;
       return null;
+    } finally {
+      notifyListeners();
     }
   }
 

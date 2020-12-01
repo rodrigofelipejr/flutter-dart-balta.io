@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:app_shopping_2/ui/android/pages/login.page.dart';
+import 'package:app_shopping_2/ui/android/pages/signup.page.dart';
 
 class UnauthenticatedUserCard extends StatelessWidget {
   @override
@@ -26,7 +28,7 @@ class UnauthenticatedUserCard extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => SignupPage(),
+                builder: (context) => SignUpPage(),
               ),
             );
           },

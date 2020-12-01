@@ -32,46 +32,21 @@ class AddToCart extends StatelessWidget {
         onPressed: () {
           if (!bloc.itemInCart(cartItem)) {
             bloc.add(cartItem);
-            final _snackBar = SnackBar(content: Text("${product.title} adicionado"));
+            final _snackBar = SnackBar(
+              content: Text("${product.title} adicionadoX"),
+              duration: Duration(seconds: 1),
+            );
             Scaffold.of(context).showSnackBar(_snackBar);
           } else {
             bloc.remove(cartItem);
-            final _snackBar = SnackBar(content: Text("${product.title} removido"));
+            final _snackBar = SnackBar(
+              content: Text("${product.title} removidoX"),
+              duration: Duration(seconds: 1),
+            );
             Scaffold.of(context).showSnackBar(_snackBar);
           }
         },
       ),
     );
-
-    // if (!bloc.itemInCart(cartItem)) {
-    //   print("1");
-    //   return Container(
-    //     width: 80,
-    //     height: 40,
-    //     child: FlatButton(
-    //       color: Theme.of(context).primaryColor,
-    //       child: Icon(Icons.add_shopping_cart),
-    //       textColor: Colors.white,
-    //       onPressed: () {
-    //         bloc.add(cartItem);
-    //         final _snackBar = SnackBar(content: Text("${product.title} adicionado"));
-    //         Scaffold.of(context).showSnackBar(_snackBar);
-    //       },
-    //     ),
-    //   );
-    // } else {
-    //   print("2");
-
-    //   return Container(
-    //     width: 80,
-    //     height: 40,
-    //     child: FlatButton(
-    //       color: Theme.of(context).primaryColor,
-    //       child: Icon(Icons.remove_shopping_cart),
-    //       textColor: Colors.white,
-    //       onPressed: () {},
-    //     ),
-    //   );
-    // }
   }
 }

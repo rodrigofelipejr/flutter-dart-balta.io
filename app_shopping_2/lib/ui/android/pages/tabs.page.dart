@@ -1,17 +1,20 @@
+import 'package:app_shopping_2/blocs/cart.bloc.dart';
 import 'package:app_shopping_2/ui/android/pages/cart.page.dart';
 import 'package:app_shopping_2/ui/android/pages/home.page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class TabPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final bloc = Provider.of<CartBloc>(context);
+
     return Scaffold(
       body: TabBarView(
         children: [
           HomePage(),
           CartPage(),
           HomePage(),
-          // CartPage(),
           // AccountPage(),
         ],
       ),
@@ -33,13 +36,12 @@ class TabPage extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.all(
-                      Radius.circular(5),
+                      Radius.circular(6),
                     ),
                   ),
                   child: Center(
                     child: Text(
-                      "",
-                      // bloc.cart.length.toString(),
+                      bloc.cart.length.toString(),
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,

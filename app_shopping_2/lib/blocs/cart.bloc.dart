@@ -28,7 +28,7 @@ class CartBloc extends ChangeNotifier {
     return result;
   }
 
-  incrase(CartItemModel item) {
+  increase(CartItemModel item) {
     if (item.quantity < 10) {
       item.quantity++;
       calculateTotal();

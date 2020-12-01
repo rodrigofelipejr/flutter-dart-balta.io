@@ -1,3 +1,4 @@
+import 'package:app_shopping_2/ui/android/pages/cart.page.dart';
 import 'package:app_shopping_2/ui/android/pages/home.page.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ class TabPage extends StatelessWidget {
       body: TabBarView(
         children: [
           HomePage(),
-          HomePage(),
+          CartPage(),
           HomePage(),
           // CartPage(),
           // AccountPage(),

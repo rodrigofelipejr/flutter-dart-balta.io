@@ -1,9 +1,13 @@
-# Flutter
+# Mobile Developer Flutter
+
+Práticas realizadas na trilha de estudos de Flutter na plataforma do [balta.io](https://balta.io/).
+
+## Anotações gerais
 
 - StatelessWidget
 - StatefulWidget
 
-## Widgets
+### Widgets
 
 - Container
 - Scaffold
@@ -15,18 +19,16 @@
 - SizedBox
 - FlatButton
 
-## Properties
+### Properties
 
 - InputDecoration (TextFormField)
 - BoxDecoration (Container)
 
-
-## Dicas
+### Dicas
 
 stl -> para criar um widget StatelessWidget
-
 stf ->  para criar um widget StatefulWidget
 
-## Sites
+### Sites
 
-- https://javiercbk.github.io/json_to_dart/
+- [Converter - Json => Dart](https://javiercbk.github.io/json_to_dart/)
